@@ -123,6 +123,8 @@ def calc_plot(p, x):
 if __name__ == "__main__":
     x = np.arange(0, 10, 0.1)
 
+    
+    plt.figure(figsize=(10,7))
     rangefinder_plot = plt.subplot2grid((2,2),(0,0))
     accelometer_plot = plt.subplot2grid((2,2), (1,0))
     calculated_plot = plt.subplot2grid((2,2), (0,1))
@@ -130,5 +132,6 @@ if __name__ == "__main__":
     simulate_rangefinder(rangefinder_plot, x)
     simulate_accelometer(accelometer_plot, x)
     calc_plot(calculated_plot, x)
+
 
     plt.show()
